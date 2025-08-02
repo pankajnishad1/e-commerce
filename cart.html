@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+        <header>
+        <section>
+            <nav class="navbar">
+                <div class="upper-nav">
+                    <div class="brand-name">
+                        <h1>E-commerce</h1>
+                    </div>
+                    <input type="text" class="input-box">
+                    <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button class="Sign-btn">Sign in or Create Account</button>
+                   <a href="/cart.html"><button class="shoping-cart-btn">
+                       <i class="fa-solid fa-cart-shopping"></i>
+                       Shopping Cart
+                    </button></a>
+                </div>
+                <div class="lower-nav">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Today's Deal</a></li>
+                        <li><a href="">Customer Service</a></li>
+                        <li><a href="">Mobiles</a></li>
+                        <li><a href="">Fashion</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <div class="back-to-home-sec">
+            <a href="/index.html">
+                <button class="back-to-home-btn">
+                    <i class="fa fa-chevron-left"></i>
+                    Back To Home
+                </button>
+                </a>
+        </div>
+        <section class="shopping-cart-section">
+            <div class="container">
+                <div class="cart-container">
+                    
+                </div>
+            </div>
+        </section>
+        <section class="cart-summary-section">
+            <div class="container">
+                <div class="cart-summary">
+                    <h2>Cart Summary</h2>
+                    <p><b><small>*One Item Tax is Rs.10</small></b></p>
+                    <div class="cart-total grid grid-two-cols">
+                        <div>
+                            <p>Total Items:</p>
+                            <p>Total Price:</p>
+                            <p>Total Tax:</p>
+                            <p>Total :</p>
+                        </div>
+                        <div>
+                            <p><span id="total-items">0</span></p>
+                            <p>Rs.<span id="total-price">00</span></p>
+                            <p>Rs.<span id="total-tax">00</span></p>
+                            <p>Rs.<span id="total-Amount">00</span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <section class="footer-section">
+            <div class="container">
+                <div class="footer-links">
+                    <div class="footer-logo">
+                        <h2>E-COMMERCE</h2>
+                    </div>
+                    <div class="links-ele">
+                        <a href="#">WEEBLY THEMES</a>
+                        <a href="#">PRE-SALE FAQS</a>
+                        <a href="#">SUBMIT A TICKET</a>
+                    </div>
+                    <div class="links-ele">
+                        <a href="#">SERVICES</a>
+                        <a href="#">THEME TWEAK</a>
+                    </div>
+                    <div class="links-ele">
+                        <a href="#">SHOWCASE</a>
+                        <a href="#">WIDGETKIT</a>
+                        <a href="#">SUPPORT</a>
+                    </div>
+                    <div class="links-ele">
+                        <a href="#">ABOUT US</a>
+                        <a href="#">CONTACT US</a>
+                        <a href="#">AFFILIATES</a>
+                        <a href="#">RESOURCES</a>
+                    </div>
+                </div>
+                
+
+                <hr>
+
+                <div class="footer-social">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+
+                <p class="copyright">© Copyright. All rights reserved.</p>
+            </div>
+        </section>
+    </footer>
+    <script type="module" src="/javascript/cartfunction.js"></script>
+    <script type="module" src="/javascript/showcartproducts.js"></script>
+    <script type="module" src="/javascript/products.js"></script>
+    <script type="module" src="/maincart.js"></script>
+</body>
+</html>
