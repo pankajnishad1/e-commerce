@@ -5,11 +5,26 @@ const totalItems = document.querySelector('#total-items');
 const totalPrice = document.querySelector('#total-price');
 const totalTax = document.querySelector('#total-tax');
 const totalAmount = document.querySelector('#total-Amount');
+const cartelementnumber = document.querySelector('.cartelementnumber');
+export const updateCartCount = () => {
+        if(cartArr.length !== 0){
+        cartelementnumber.style.display="inline-block";
+        cartelementnumber.children[0].innerText  = cartArr.length;
+        }
+        else{
+         cartelementnumber.style.display="none";
+        }
+}
 
 export let cartArr = JSON.parse(localStorage.getItem("cart")) || [];
 
- export const carttolocal = ()=>{
+export const carttolocal = ()=>{
+    console.log(cartArr.length);
 localStorage.setItem("cart", JSON.stringify(cartArr));
+    updateCartCount();  
+    showtocart();
+    cartSummary();
+
 }
  export const addtocart=(e)=>{
         if(e.target.classList.contains("add-cart")){
@@ -21,8 +36,7 @@ localStorage.setItem("cart", JSON.stringify(cartArr));
         }else{
             cartArr.push({id: Id,Quantity:Quantity,price:Price})
             carttolocal();
-            cartSummary();
-            console.log(cartArr);
+           
         }
     }
 }
@@ -31,11 +45,9 @@ export const removecart = (e) => {
     if(e.target.classList.contains("cart-remove-btn")){
         let itemToRemove = cartArr.find(item => item.id === e.target.id);
         let itemToRemoveIndex = cartArr.indexOf(itemToRemove);
-        cartArr.splice(itemToRemoveIndex,1)
-        showtocart();
+        cartArr.splice(itemToRemoveIndex,1) 
         carttolocal();
-        cartSummary();
-        console.log(cartArr)
+
 
 }}
 

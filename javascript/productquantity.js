@@ -1,7 +1,8 @@
 import { cartArr, cartSummary ,carttolocal} from "./cartfunction.js"
 import { cartCon } from './showcartproducts.js';
 const currentQuantitytolocal =(e,currentQuantity)=>{
-        let idofproduct = e.target.parentElement.parentElement.querySelector('.cart-remove-btn').id;
+
+        let idofproduct = e.target.parentElement.parentElement.parentElement.querySelector('.cart-remove-btn').id;
         let currobjectofproduct = cartArr.find(item => item.id === idofproduct);
         let indexofcurrentProduct = cartArr.indexOf(currobjectofproduct);
         if(indexofcurrentProduct !== -1){

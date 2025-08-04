@@ -5,7 +5,7 @@ import { productCon,showProducts  } from '/javascript/showproducts.js';
 
 
 export const showfilterproductfunction = (e) => {
-                const fullclassCt = e.target.className;
+            const fullclassCt = e.target.className;
             const  firstpartclassCt = fullclassCt.split(" ")[0];
             const paratext = e.target.children[1].innerText; 
             const filteredproduct =  products.filter(item =>{

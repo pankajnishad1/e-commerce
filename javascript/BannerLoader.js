@@ -4,20 +4,27 @@ const bannerPrevious  = document.querySelector('.banner-previous');
 const bannerNext  = document.querySelector('.banner-next');
 const bannerArr =[
     {
-        productImg:"assests/Black-Friday.jpg" , Name:"black friday"
+        productImg:"assests/banner (1).jpg" 
     },   
     {
-        productImg:"assests/shopcenter.jpg" , Name:"show center"
+        productImg:"assests/banner (2).jpg" 
     },   
     {
-        productImg:"assests/online-shoping.jpg" , Name:"shoes"
+        productImg:"assests/banner (3).jpg" 
     },   
     {
-        productImg:"assests/new-fashion.jpg" , Name:"new fashion"
+        productImg:"assests/banner (4).jpg" 
     },   
     {
-        productImg:"assests/special-sale.jpg" , Name:"special-sale"
+        productImg:"assests/banner (5).jpg" 
     }
+    // {
+    //     productImg:"assests/banner (6).jpg" 
+    // },   
+    // {
+    //     productImg:"assests/banner (7).jpg" 
+    // },   
+
 ]
 
 // banner start
@@ -28,7 +35,7 @@ const showbannerposition =()=>{
 showbannerposition()
 const slidenext =()=>{
     if(bannercounter<bannerArr.length){
-    bannerslider.style.transform = `translateX(-${bannercounter*1257}px)`; 
+    bannerslider.style.transform = `translateX(-${bannercounter*100}%)`; 
     bannercounter++;
     bannerPrevious.style.opacity = 1;
     showbannerposition()
@@ -41,7 +48,7 @@ else{
 const slideprevious =()=>{
     let bannerback = bannercounter-2;
     if(1<bannercounter){
-        bannerslider.style.transform = `translateX(-${bannerback*1257}px)`;
+        bannerslider.style.transform = `translateX(-${bannerback*100}%)`;
         bannercounter--;
         bannerNext.style.opacity = 1;
     showbannerposition()
@@ -54,7 +61,7 @@ const slideprevious =()=>{
 const bannerloader = ()=>{
         let clutter  = "";
         bannerArr.forEach((slide)=>{
-            clutter +=`<img src="${slide.productImg}" alt="${slide.Name}" class="banner-img" loading="lazy">`;
+            clutter +=`<img src="${slide.productImg}" class="banner-img" loading="lazy">`;
         })
         bannerslider.innerHTML = clutter;
 

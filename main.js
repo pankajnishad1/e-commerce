@@ -1,7 +1,8 @@
 import { productCon } from '/javascript/showproducts.js';
 import { showProducts } from '/javascript/showproducts.js';
-import { addtocart } from '/javascript/cartfunction.js';
+import { addtocart,updateCartCount } from '/javascript/cartfunction.js';
 import { showfilterproductfunction,categoryBtn,productsecH } from '/javascript/category.js';
+import { searchbtn,inputbox,inputfunction,searchfunction } from './javascript/searchfunction.js';
 
 import { productCounter } from '/javascript/productquantity.js';
 // import { bannerloader, slidenext, slideprevious } from '/javascript/banner.js';
@@ -26,6 +27,23 @@ productCon.addEventListener('click',(e)=>{
     productCounter(e)
 })
 
+inputbox.addEventListener('input',(e)=>{
+    if(productCon){
+    inputfunction(e);
+    }
+    else{
+        alert("back to home");
+    }
+})
+searchbtn.addEventListener('click',(e)=>{
+    if(productCon){
+        searchfunction();
+    }
+    else{
+        alert("back to home");
+    }
+})
+
 bannerloader();
 showProducts();
-
+updateCartCount();
